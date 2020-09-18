@@ -22,10 +22,27 @@
 	略
 
 5>.将linux本地文件推到GitHub上
-
-[root@hadoop101.yinzhengjie.com ~/LearningNotes]# git config --global user.name "Jason Yin"
-[root@hadoop101.yinzhengjie.com ~/LearningNotes]# 
-[root@hadoop101.yinzhengjie.com ~/LearningNotes]# git config --global user.email "y1053419035@qq.com"
-[root@hadoop101.yinzhengjie.com ~/LearningNotes]# 
-
+    [root@hadoop101.yinzhengjie.com ~/LearningNotes]# git config --global user.name "Jason Yin"
+    [root@hadoop101.yinzhengjie.com ~/LearningNotes]# 
+    [root@hadoop101.yinzhengjie.com ~/LearningNotes]# git config --global user.email "y1053419035@qq.com"
+    [root@hadoop101.yinzhengjie.com ~/LearningNotes]# 
+    [root@hadoop101.yinzhengjie.com ~/LearningNotes]# vim README.md 
+    [root@hadoop101.yinzhengjie.com ~/LearningNotes]# 
+    [root@hadoop101.yinzhengjie.com ~/LearningNotes]# git add *
+    [root@hadoop101.yinzhengjie.com ~/LearningNotes]# 
+    [root@hadoop101.yinzhengjie.com ~/LearningNotes]# git commit -m "first commit"
+    [master 1c67c9f] first commit
+     1 file changed, 5 insertions(+)
+    [root@hadoop101.yinzhengjie.com ~/LearningNotes]# 
+    [root@hadoop101.yinzhengjie.com ~/LearningNotes]# git push -u origin master
+    Counting objects: 8, done.
+    Delta compression using up to 2 threads.
+    Compressing objects: 100% (4/4), done.
+    Writing objects: 100% (6/6), 952 bytes | 0 bytes/s, done.
+    Total 6 (delta 1), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (1/1), done.
+    To git@github.com:yinzhengjie/LearningNotes.git
+       08b06ae..1c67c9f  master -> master
+    Branch master set up to track remote branch master from origin.
+    [root@hadoop101.yinzhengjie.com ~/LearningNotes]# 
 
