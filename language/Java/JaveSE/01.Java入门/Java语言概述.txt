@@ -1,0 +1,35 @@
+Java是学习JavaEE，大数据，Android开发的基石。
+
+
+Java语言概述:
+	是SUN(Stanford University Network，斯坦福大学网络)公司1995年推出的一门高级编程语言。
+	是一种面向Internet的编程语言
+	随着Java在Web方面的不断成熟，已经成为web应用程序的首先开发语言。
+	常见的后端开发语言有：Java，PHP,Python，Go，C#，Node.js
+
+
+Java简史：
+	推荐阅读：https://www.cnblogs.com/yinzhengjie/p/12208138.html
+
+
+Java技术体系平台：
+    JDK也就是常说的J2SE，在1999年，正式发布了Java第二代平台，发布了三个版本。
+             J2EE（Java 2 Platform Enterprise Edition）企业版
+　　　　　　适用于企业级应用服务器开发。
+　　　　　　是为开发企业环境下的应用程序提供的一套解决方案。该技术体系中包含的技术如Servlet Jsp等，主要针对于WEB应用程序开发。在企业及应用相对较广，比如很多大型电商网站基本上都会选择JavaEE来开发。 　　　　
+
+　　　　J2ME（Java 2 Platform Micro Edittion）小型版(微型版)
+　　　　　　适用于移动，无线，机顶盒等设备环境。
+　　　　　　是为开发电子消费产品和嵌入式设备提供的解决方案。该技术体系主要应用于小型电子消费类产品，比如手机中的应用程序等，以前诺基亚手机的塞班系统使用的就是这种语言开发的，不过随着2014年1月2日起，诺基亚正式停止更新和发布塞班应用(2014年4月27日，微软对诺基亚设备与服务部门的收购案正式完成，“Nokia”品牌被保留)。使用的J2ME的就相对较少啦，目前移动款开发的语言应该是安卓(Android)和IOS系统占主流。
+
+　　　　J2SE（Java 2 Platform Standard Edition）标准版
+　　　　　　适用于桌面平台。
+　　　　　　是为开发普通桌面和商务应用程序提供的解决方案。该技术体系是其他两者的基础，可以完成一些桌面应用程序的开发。比如Java版的扫雷。
+　　2005年，即Java5.0版本后，J2EE更名为JAVAEE, J2ME更名为JAVASE, J2SE更名为JAVAME。
+　　Servlet、Jsp都包含在JavaEE规范中。
+　　JDK7、JDK8、JDK11是LTS（Long Term Suppot），JDK协议是JRL(JavaResearch License)协议。
+
+
+
+Windows操作系统安装JDK环境
+	推荐阅读：https://www.cnblogs.com/yinzhengjie2020/p/12206579.html
