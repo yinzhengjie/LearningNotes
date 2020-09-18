@@ -23,4 +23,9 @@
 
 5>.将linux本地文件推到GitHub上
 
+[root@hadoop101.yinzhengjie.com ~/LearningNotes]# git config --global user.name "Jason Yin"
+[root@hadoop101.yinzhengjie.com ~/LearningNotes]# 
+[root@hadoop101.yinzhengjie.com ~/LearningNotes]# git config --global user.email "y1053419035@qq.com"
+[root@hadoop101.yinzhengjie.com ~/LearningNotes]# 
+
 
