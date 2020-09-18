@@ -1,0 +1,55 @@
+//protobuf默认支持的版本是2.x,现在一般使用3.x版本,所以需要手动指定版本号,如果不这样做，协议缓冲区编译器将假定正在使用proto2。这也必须是文件的第一个非空的非注释行。
+syntax = "proto3";
+
+//.proto文件应包含一个go_package选项，用于指定包含所生成代码的Go软件包的完整导入路径(最后一次"bar"就是生成go文件的包名),官方在未来的发行版本会支持哟;
+option go_package ="example.com/foo/bar";
+
+message Teacher{
+    //姓名
+    string name = 1;
+
+    //年龄
+    int32 age = 2 ;
+
+    //地址
+    string address = 3;
+
+    //定义一个message
+    message PhoneNumber{
+        string number = 1;
+        PhoneType type = 2;
+    }
+
+    //repeadted关键字类似与go中的切片，编译之后对应的也是go的切片
+    repeated PhoneNumber phone = 4 ;
+}
+
+//enum为关键字，作用为定义一种枚举类型
+enum PhoneType {
+    /*
+        enum还可以为不同的枚举常量指定相同的值来定义别名。
+        如果想要使用这个功能必须讲 allow_alias 选项设置为true，负责编译器将报错。
+    */
+    option allow_alias = true;
+
+    /*
+        如下所示,enum的第一个常量映射为0，每个枚举定义必须包含一个映射到零的常量作为其第一个元素。
+        这是因为必须有一个零值，以便我们可以使用0作为数字默认值。
+        零值必须是第一个元素，以便与proto2语义兼容，其中第一个枚举值始终是默认值。
+
+        默认值
+            解析数据时，如果编码的消息不包含特定的单数元素，则解析对象对象中的相应字段将设置为该字段的默认值。
+            不同类型的默认值不同，具体如下：
+                对于字符串，默认值为空字符串。
+                对于字节，默认值为空字节。
+                对于bools，默认值为false。
+                对于数字类型，默认值为零。
+                对于枚举，默认值是第一个定义的枚举值，该值必须为0。
+                repeated字段默认值是空列表
+                message字段的默认值为空对象
+    */
+    MOBILE = 0;
+    HOME = 1;
+    WORK = 2;
+    Personal = 2;
+}

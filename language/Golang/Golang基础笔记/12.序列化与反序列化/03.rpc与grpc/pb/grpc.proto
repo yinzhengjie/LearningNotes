@@ -1,0 +1,37 @@
+////protobuf默认支持的版本是2.0,现在一般使用3.0版本,所以需要手动指定版本号
+//c语言的编程风格
+syntax = "proto3";
+
+//指定包名
+package pb;
+
+//定义传输数据的格式
+message People{
+    string name = 1; //1表示表示字段是1   数据库中表的主键id等于1,主键不能重复,标示位数据不能重复
+    //标示位不能使用19000 -19999  系统预留位
+    int32 age = 2;
+
+    //结构体嵌套
+    student s = 3;
+    //使用数组/切片
+    repeated string phone = 4;
+
+    //oneof的作用是多选一
+    oneof data{
+        int32 score = 5;
+        string city = 6;
+        bool good = 7;
+    }
+}
+
+//oneof  c语言中的联合体
+
+message student{
+    string name = 1;
+    int32 age = 6;
+}
+
+//通过定义服务,然后借助框架,帮助实现部分的rpc代码
+service Hello{
+    rpc World(student)returns(student);
+}

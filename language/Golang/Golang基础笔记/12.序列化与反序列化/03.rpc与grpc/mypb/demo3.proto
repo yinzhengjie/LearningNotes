@@ -1,0 +1,26 @@
+//protobuf默认支持的版本是2.x,现在一般使用3.x版本,所以需要手动指定版本号,如果不这样做，协议缓冲区编译器将假定正在使用proto2。这也必须是文件的第一个非空的非注释行。
+syntax = "proto3";
+
+//.proto文件应包含一个go_package选项，用于指定包含所生成代码的Go软件包的完整导入路径(最后一次"bar"就是生成go文件的包名),官方在未来的发行版本会支持哟;
+option go_package ="example.com/foo/bar";
+
+message Teacher{
+    //姓名
+    string name = 1;
+
+    //年龄
+    int32 age = 2 ;
+
+    //地址
+    string address = 3;
+
+    //定义一个message
+    message PhoneNumber{
+        string number = 1;
+        int64 type = 2;
+    }
+
+    //repeadted关键字类似与go中的切片，编译之后对应的也是go的切片
+    repeated PhoneNumber phone = 4 ;
+}
+
